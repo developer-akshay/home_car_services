@@ -1,0 +1,483 @@
+/* ------------------------ */
+/* basic setup */
+/* ----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1;}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* ------------------------ */
+/* reuseable code */
+/* ----------------------- */
+
+.row{
+    max-width: 1140px;
+    /* margin: 0 auto 0 auto; down below is same*/
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* ------------------------ */
+/* headings */
+/* ----------------------- */
+
+h1,
+h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    /* yeh upar jo hamne html vala property ma
+    size diya ha ussa yeh font size compare ho jayega 
+    toh ab font size 40px hoga (20px*2) */
+    font-size: 240%;
+    word-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: lightseagreen;
+    content: " ";
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* ------------------------ */
+/* PARAGRAPH */
+/* ----------------------- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box {
+    padding: 2%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+i {
+    font-size: 400%;
+}
+
+/* ------------------------ */
+/* BUTTONS */
+/* ----------------------- */
+
+/* link matlab click se phelha and visited matlab click ka badd ka effect */
+.btn:link,
+.btn:visited {
+    margin: 30px;
+    display: inline-block;
+    padding: 10px 35px;
+    font-weight: 500;
+    /* it will remove the line below the button */
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 200px;
+    border-color: lightseagreen;
+    color: #20b2aa;
+    /* transition: background-color 0.2s , border 0.2s , color 0.2s; */
+}
+
+/* active state jab hum click karte ha button */
+.btn:hover,
+.btn:active {
+    transform: scale(1.1);
+    transition: 0.5s;
+    color: #2cd9d0;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    color:  #2cd9d0;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active  {
+    color:  #2cd9d0;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    margin-left: 140px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited  {
+    margin-left: 0px;
+}
+
+/* ------------------------ */
+/* header */
+/* ----------------------- */
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/hero.jpg');
+    /* taki jo image ha vofit ho jaye screen ma  */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* its 100% to the view port puri screen vich dhekhegi */
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 60%;
+    left: 50%;
+    /* it translate the element into half of its width hight top and bottom */
+    transform: translate(-50%,-50%);
+}
+
+/* ------------------------ */
+/*         NAVBAR  */
+/* ----------------------- */
+
+.logo{
+    margin-top: 20px;
+    height: 100px;
+    width: auto;
+    float: left;
+    border: 1px solid;
+    border-radius: 200px;
+    border-color: lightseagreen;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    list-style: none;/*taki bullet popinit hatt jaye */
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;/* yeh niche ki line hatta deti ha*/
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #2cd9d0;
+} 
+
+/* ------------------------ */
+/*      SECTION FEATURES    */
+/* ----------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/* ------------------------ */
+/*      car wash images     */
+/* ----------------------- */
+
+.section-carwash {
+    padding: 0;
+}
+.carwash-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.carwash-showcase li {
+    display: block;
+    float: left;
+    /* width is 25%kyu ki 4 pgoto ha sab ko barobar space chayia container ma  */
+    width: 25%;
+}
+
+.carwash-photo {
+    /* width 100 % isliye taki yeh parent class ki 25 % sari use kare  */
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* bg color black isliye taki opacity dark kare image ko nhi toh lightwhite color ka dhikayega */
+    background-color: #000;
+}
+
+.carwash-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: 200px;
+    transform: scale(1.15);
+    transition: transform 0.5s , opacity 0.5s;
+}
+
+.carwash-photo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+        
+}
+
+/* ------------------------ */
+/*      How it WORKS     */
+/* ----------------------- */
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+.steps-box:first-child {
+    /* text align also works on image */
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app_logo {
+    width: 105%;
+    border: 2px solid;
+    border-radius: 16px;
+}
+
+.work-steps {
+    margin-bottom: 50px;
+}
+
+.work-steps:last-of-type {
+    margin-bottom: 100px;
+}
+
+.work-steps div {
+    color: lightseagreen;
+    border: 2px solid lightseagreen;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: 10px;
+    margin-right: 10px;
+}
+
+/* ------------------------ */
+/*      city     */
+/* ----------------------- */
+
+
+.city-features img {
+    width: 10%;
+}
+
+.diffcity {
+    width: 100%;
+    height: 200px;
+    border: 2px solid lightseagreen;
+    border-radius: 16px;
+}
+
+.city {
+    padding: 1%;
+}
+
+.city p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.city i {
+    font-size: 400%;
+}
+.city img {
+    margin-bottom: 15px;
+}
+
+/* ------------------------ */
+/*      pakages     */
+/* ----------------------- */
+
+.ios-ios-checkmark-empty img {
+    width:10%
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    height: 80px;
+
+}
+
+.section.plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color: lightblue;
+    color: black;
+    border: 2px solid peachpuff;
+    border-radius: 16px;
+    box-shadow: 0 2px 2px #e3e3e3;
+    width: 90%;
+    margin-left: 4%;
+}
+
+.plan-box div {
+    padding: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* taki hum button ko center kar saake */
+.btn:link,
+.btn:visited {
+    margin: 30px;
+    display: inline-block;
+    padding: 10px 35px;
+    font-weight: 500;
+    /* it will remove the line below the button */
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 200px;
+    border-color: lightseagreen;
+    color: #20b2aa;
+    /* transition: background-color 0.2s , border 0.2s , color 0.2s; */
+}
+.plan-box div:last-child{
+    text-align: center;
+}
+
+/* active state jab hum click karte ha button */
+
+
+.plan-price {
+    font-size: 200%;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.plan-price-quote {
+    font-size: 80%;  
+}
+
+/* ------------------------ */
+/*      FOOTER     */
+/* ----------------------- */
+
+footer {
+    background-color: #333;
+}
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-icons {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li{
+    margin-top: 10%;
+}
+
+.footer-nav li,
+.social-icons li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+    margin-right: 0px;
+} 
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: darkcyan;
+    transition: color 0.2s ;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: lightseagreen;
+}
+
+footer p {
+    color: lightseagreen;
+    font-size: 90%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
