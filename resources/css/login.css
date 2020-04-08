@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Montserrat' , sans-serif;
-    background: lightslategrey;
+    background:silver;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@ a {
 }
 
 .form-container form {
-    background: lightseagreen;
+    background: whitesmoke;
     display: flex;
     flex-direction: column;
     padding: 0 50px;
@@ -156,9 +156,10 @@ button.ghost {
 
 .overlay {
     background: lightseagreen;
+    
     background: linear-gradient(to right, #20b2aa,
     lightskyblue ) no-repeat 0 0 / cover;
-    color: whitesmoke;
+    color: black;
     position: relative;
     left: -100%;
     height: 100%;
