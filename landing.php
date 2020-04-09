@@ -21,7 +21,17 @@
                     <li><a href="#">Services</a></li>
                     <li><a href="#">How it works</a></li>
                     <li><a href="#">Our cities</a></li>
-                    <li><a href="login.php">Signup / Login</a></li>
+                    <li>
+                        <?php session_start();
+                        if(empty($_SESSION['email'])) { ?>
+                            <a href="login.php" >Signup / Login</a>
+                        <?php } 
+                        else { ?>
+                        <form method="GET" action="user_login.php">
+                            <a href="login.php" name="logout">logout&nbsp; <?php echo"$_SESSION[email]"; ?></a>
+                        </form>
+                        <?php   }  ?>
+                    </li>
                 </ul>
             </div>
         </nav>

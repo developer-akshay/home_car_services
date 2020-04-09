@@ -33,7 +33,7 @@
         </div>
         <div class="form-container sign-in-container">
             <!-- signin -->
-            <form method="POST" action="user_login.php">
+            <form name="signin" method="POST" action="user_login.php" onbutton="return validateForm()" required>
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab social-facebook"><img src="resources/img/facebook.png" alt="facebook"></i></a>
