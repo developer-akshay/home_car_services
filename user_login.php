@@ -11,6 +11,18 @@
 			$q1 = ("SELECT * FROM user WHERE email_address='$email' && password='$password'"); 
 			$res1 = $con ->query($q1);
 			$get1 = mysqli_num_rows($res1);
+
+			//ab hum fetch karenge aur use store kara lenga apne cart(index.php) vale page pa
+			$sql = ("SELECT  `address`, `city`, `postal_code`, `phone` FROM `user` WHERE `email_address`=$email");
+			$result = $con ->query($sql);
+			$row = mysqli_fetch_array($result);
+
+			$_SESSION['address'] = $row['address'];
+			$_SESSION['city'] = $row['city'];
+			$_SESSION['postal_code'] = $row['postal_code'];
+			$_SESSION['phone'] = $row['phone'];
+
+
 			if($get1 ==true ) 
 				{
 					$_SESSION['email'] = $email;
@@ -21,6 +33,10 @@
 					header("location:http://localhost/mca/home_car_services/login.php");
 					
 				}
+
+			
+			
+
 		}
 
 		// -------------------
@@ -45,7 +61,13 @@
 		// $res1 = $con ->query($q1);
 		if($ex)
 			{
-				$_SESSION['email'] = $email_address;
+				$_SESSION['email'] = $email;
+				$_SESSION['username'] = $username;
+				$_SESSION['address'] = $address;
+				$_SESSION['city'] = $city;
+				$_SESSION['postal_code'] = $postal_code;
+				$_SESSION['phone'] = $phone;
+
 				header("location:http://localhost/mca/home_car_services/landing.php");
 			}
 		else
@@ -53,13 +75,13 @@
 				header("location:http://localhost/mca/home_car_services/login.php");
 			}
 		}
-	else if(isset($_GET['logout']))
-		{
-			session_destroy();
-			unset($_SESSION['email']);
+	// else if($_GET['logout'])
+	// 	{
+	// 		session_destroy();
+	// 		unset($_SESSION['email']);
 
-			header("location:http://localhost/mca/home_car_services/login.php");
-		}
+	// 		header("location:http://localhost/mca/home_car_services/login.php");
+	// 	}
 	else
 		echo"code block not working of issest buttons";
 	 	

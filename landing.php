@@ -23,12 +23,12 @@
                     <li><a href="#">Our cities</a></li>
                     <li>
                         <?php session_start();
-                        if(empty($_SESSION['email'])) { ?>
-                            <a href="login.php" >Signup / Login</a>
+                        if(!empty($_SESSION['email'])) { ?>
+                            <a href="s_destroy.php" name="logout">logout</a>
                         <?php } 
                         else { ?>
                         <form method="GET" action="user_login.php">
-                            <a href="login.php" name="logout">logout&nbsp; <?php echo"$_SESSION[email]"; ?></a>
+                            <a href="login.php" >Signup / Login</a>
                         </form>
                         <?php   }  ?>
                     </li>
@@ -282,7 +282,15 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-full">Sign up now</a>
+                    <?php 
+                        if(!empty($_SESSION['email'])) { ?>
+                            <!-- <a href="s_destroy.php" name="logout">logout</a> -->
+                            <a href="cart.php" class="btn btn-full">Select</a>
+                        <?php } 
+                        else { ?>
+                            <!-- <a href="login.php" >Signup / Login</a> -->
+                            <a href="login.php" class="btn btn-full">Sign up now</a>
+                        <?php   }  ?>
                     </div>
                 </div>
             </div>
@@ -325,7 +333,15 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-full">Sign up now</a>
+                    <?php 
+                        if(!empty($_SESSION['email'])) { ?>
+                            <!-- <a href="s_destroy.php" name="logout">logout</a> -->
+                            <a href="cart.php" class="btn btn-full">Select</a>
+                        <?php } 
+                        else { ?>
+                            <!-- <a href="login.php" >Signup / Login</a> -->
+                            <a href="login.php" class="btn btn-full">Sign up now</a>
+                        <?php   }  ?>
                     </div>
                 </div>
             </div>
@@ -368,7 +384,16 @@
                         </ul>
                     </div>
                     <div >
-                        <a href="#" class="btn btn-full">Sign up now</a>
+                        <!-- <a href="#" class="btn btn-full">Sign up now</a> -->
+                        <?php 
+                        if(!empty($_SESSION['email'])) { ?>
+                            <!-- <a href="s_destroy.php" name="logout">logout</a> -->
+                            <a href="vendor/js/dist/index.php" class="btn btn-full">Select</a>
+                        <?php } 
+                        else { ?>
+                            <!-- <a href="login.php" >Signup / Login</a> -->
+                            <a href="login.php" class="btn btn-full">Sign up now</a>
+                        <?php   }  ?>
                     </div>
                 </div>
             </div>
