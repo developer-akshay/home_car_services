@@ -512,3 +512,29 @@ footer p {
     margin-top: 0px;
     margin-bottom: 30px;
 }
+
+
+/* ------------------------ */
+/*      animation    */
+/* ----------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    /* taki element dhekha kam aur jab load ho page toh animation ho sake */
+    opacity: 0;
+    animation-duration: 1s;
+    /* taki firefox ma bhi chale animation */
+    -webkit-animation-duration: 1s;
+}
+
+.js--wp-4 {
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{
+    opacity: 1;
+}

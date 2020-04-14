@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendor/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/animate.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet"> 
     
@@ -21,6 +22,8 @@
                     <li><a href="#features">Services</a></li>
                     <li><a href="#works">How it works</a></li>
                     <li><a href="#cities">Our cities</a></li>
+                    <li><a href="#">Carrer</a></li>
+
                     <li>
                         <?php session_start();
                         if(!empty($_SESSION['email'])) { ?>
@@ -56,7 +59,7 @@
             </p>
         </div>
 
-        <div class="row">
+        <div class="row js--wp-1">
             <div class="col span-1-of-4 box">
                 <i class="car_wash">
                     <img src="vendor/fonts/car_wash.png" alt="Car Wash">
@@ -158,7 +161,7 @@
             </h2>
             <div class="row">
                 <div class="col span-1-of-2 steps-box">
-                    <img src="resources/img/app_logo.jpg" alt="App Logo" class="app_logo">
+                    <img src="resources/img/app_logo.jpg" alt="App Logo" class="app_logo js--wp-2" >
                 </div>
                 <div class="col span-1-of-2 steps-box">
                     <div class="work-steps">
@@ -185,7 +188,7 @@
         <div class="row">
             <h2>We're currentley in these cities</h2>
         </div>
-        <div class="row">
+        <div class="row js--wp-3">
             <div class="col span-1-of-4 city">
                 <img src="resources/img/mohali.jpg" alt="mohali" class="diffcity">
                 <h3>MOHALI</h3>
@@ -245,7 +248,7 @@
         </div>
         <div class="row">
             <div class="col span-1-of-3">
-                <div class="plan-box">
+                <div class="plan-box js--wp-4">
                     <div>
                         <h3>premium</h3>
                         <p class="plan-price">₹ 4000 </p>
