@@ -16,11 +16,12 @@
 			$sql = ("SELECT  `address`, `city`, `postal_code`, `phone` FROM `user` WHERE `email_address`=$email");
 			$result = $con ->query($sql);
 			$row = mysqli_fetch_array($result);
+			
 
-			$_SESSION['address'] = $row['address'];
-			$_SESSION['city'] = $row['city'];
-			$_SESSION['postal_code'] = $row['postal_code'];
-			$_SESSION['phone'] = $row['phone'];
+			$_SESSION['address'] = $row[0];
+			$_SESSION['city'] = $row[1];
+			$_SESSION['postal_code'] = $row[2	];
+			$_SESSION['phone'] = $row[3];
 
 
 			if($get1 ==true ) 
@@ -82,6 +83,10 @@
 
 	// 		header("location:http://localhost/mca/home_car_services/login.php");
 	// 	}
+	elseif($_POST['editf1'])
+		{
+			echo"yex not";
+		}
 	else
 		echo"code block not working of issest buttons";
 	 	

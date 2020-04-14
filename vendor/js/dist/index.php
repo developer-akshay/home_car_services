@@ -2,18 +2,17 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Multi Step Form with Progress Bar using jQuery and CSS3</title>
+  <title>cart</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
     <?php    session_start();     
-        echo$_SESSION['phone'];
     ?>
     <!-- partial:index.partial.html -->
     <!-- multistep form -->
-    <form id="msform">
+    <form id="msform" method="$_POST" action="user_login.php">
       <!-- progressbar -->
         <ul id="progressbar">
           <li class="active">ADDRESS</li>
@@ -31,7 +30,7 @@
           <input type="text"  name="phone"        placeholder="phone"       value="<?php echo$_SESSION['phone']; ?>"/>
 
           <!-- edit karna ha  -->
-          <input type="button" name="previous" class="action-button" value="Edit" />
+          <input type="submit" name="editf1" class="action-button" value="Edit" />
           <!-- edit it -->
 
           <input type="button" name="next"     class="next action-button" value="Next" />
@@ -48,7 +47,8 @@
         <fieldset>
           <h2 class="fs-title">PAYMENT MODE</h2>
           <h3 class="fs-subtitle">We will never sell it</h3>
-          <input type="text" name="fname" placeholder="First Name" />
+          cash in hand:<input type="radio" name="cash on delivery" placeholder="First Name" />
+          
           
           <input type="button" name="previous"  class="previous action-button" value="Previous" />
           <input type="submit" name="submit"    class="submit action-button" value="Submit" />

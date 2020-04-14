@@ -13,14 +13,14 @@
 <body>
     <header>
 
-        <nav>
+        <nav >
             <div class="row">
                 <!-- for the logo -->
                 <img src="resources/img/logo_black.jpg" alt="Home Car Services" class="logo">
                 <ul class="main-nav">
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Our cities</a></li>
+                    <li><a href="#features">Services</a></li>
+                    <li><a href="#works">How it works</a></li>
+                    <li><a href="#cities">Our cities</a></li>
                     <li>
                         <?php session_start();
                         if(!empty($_SESSION['email'])) { ?>
@@ -39,12 +39,12 @@
         <!-- hum yeh yeh banayenge logo,nav,hero image ,main heading  -->
         <div class="hero-text-box">
             <h1>A clean car says a lot about you</h1>
-            <a class=" btn btn-full" href="#">Can't Wait For A Car Wash</a>
-            <a class=" btn btn-ghost" href="#">Show Me More</a>
+            <a class=" btn btn-full js--scroll-to-plan" href="#">Can't Wait For A Car Wash</a>
+            <a class=" btn btn-ghost js--scroll-to-start" href="#">Show Me More</a>
         </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features" id="features">
 
         <div class="row">
             <h2>Get a showroom shine , Every time</h2>
@@ -151,7 +151,7 @@
         </ul>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
         <div class="row">
             <h2>
                 How it works &mdash; Simple as 1, 2, 3
@@ -181,7 +181,7 @@
         </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
         <div class="row">
             <h2>We're currentley in these cities</h2>
         </div>
@@ -239,7 +239,7 @@
         </div>
     </section>
 
-    <section class="section-plans">
+    <section class="section-plans js--section-plans">
         <div class="row">
             <h2>The champagne of car health.</h2>
         </div>
@@ -428,6 +428,8 @@
             </p>
         </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="vendor/js/jquery.waypoints.min.js"></script>
+    <script src="resources/jquerry/script.js "></script>
 </body>
 </html>

@@ -178,8 +178,8 @@ header{
 /* ----------------------- */
 
 .logo{
-    margin-top: 20px;
-    height: 100px;
+    margin: 5px 0;
+    height: 50px;
     width: auto;
     float: left;
     border: 1px solid;
@@ -192,10 +192,14 @@ header{
     transition: 0.5s;
   }
 
+/* ------------------------ */
+/*         main navbar  */
+/* ----------------------- */
+
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 30px;
 }
 
 .main-nav li {
@@ -223,6 +227,33 @@ header{
 .main-nav li a:active {
     border-bottom: 2px solid #2cd9d0;
 } 
+
+/* ------------------------ */
+/*         STICKY NAVBAR  */
+/* ----------------------- */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.98);
+    /* 0 on the x axis 2px on the y axis and 2 px on the blur and the color */
+    box-shadow: 0 2px 2px whitesmoke;
+    /* taki yeh images ka upar show ho  */
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+   
+}
+
+.sticky .main-nav {
+    margin: 20px 0;
+}
 
 /* ------------------------ */
 /*      SECTION FEATURES    */
