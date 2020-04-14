@@ -285,10 +285,11 @@
                         </ul>
                     </div>
                     <div>
-                    <?php 
+                            <!-- <a href="#" class="btn btn-full">Sign up now</a> -->
+                        <?php 
                         if(!empty($_SESSION['email'])) { ?>
                             <!-- <a href="s_destroy.php" name="logout">logout</a> -->
-                            <a href="cart.php" class="btn btn-full">Select</a>
+                            <a href="vendor/js/dist/index.php" class="btn btn-full">Select</a>
                         <?php } 
                         else { ?>
                             <!-- <a href="login.php" >Signup / Login</a> -->
@@ -336,15 +337,17 @@
                         </ul>
                     </div>
                     <div>
-                    <?php 
+                            <!-- <a href="#" class="btn btn-full">Sign up now</a> -->
+                        <?php 
                         if(!empty($_SESSION['email'])) { ?>
                             <!-- <a href="s_destroy.php" name="logout">logout</a> -->
-                            <a href="cart.php" class="btn btn-full">Select</a>
+                            <a href="vendor/js/dist/index.php" class="btn btn-full">Select</a>
                         <?php } 
                         else { ?>
                             <!-- <a href="login.php" >Signup / Login</a> -->
                             <a href="login.php" class="btn btn-full">Sign up now</a>
                         <?php   }  ?>
+                        
                     </div>
                 </div>
             </div>
