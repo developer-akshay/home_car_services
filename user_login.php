@@ -13,7 +13,7 @@
 			$get1 = mysqli_num_rows($res1);
 
 			//ab hum fetch karenge aur use store kara lenga apne cart(index.php) vale page pa
-			$sql = ("SELECT  `address`, `city`, `postal_code`, `phone` FROM `user` WHERE `email_address`=$email");
+			$sql = ("SELECT  `address`, `city`, `postal_code`, `phone` FROM `user` WHERE `email_address`='$email'");
 			$result = $con ->query($sql);
 			$row = mysqli_fetch_array($result);
 			

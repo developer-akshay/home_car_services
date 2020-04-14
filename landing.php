@@ -1,3 +1,9 @@
+<?php 
+    session_start(); 
+    // use this to check session gets a value or not
+    // print_r($_SESSION); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +23,7 @@
         <nav >
             <div class="row">
                 <!-- for the logo -->
-                <img src="resources/img/logo_black.jpg" alt="Home Car Services" class="logo">
+                <img src="resources/img/logo_black.jpg" alt="Home Car Services" class="logo" >
                 <ul class="main-nav">
                     <li><a href="#features">Services</a></li>
                     <li><a href="#works">How it works</a></li>
@@ -25,7 +31,7 @@
                     <li><a href="#">Carrer</a></li>
 
                     <li>
-                        <?php session_start();
+                        <?php 
                         if(!empty($_SESSION['email'])) { ?>
                             <a href="s_destroy.php" name="logout">logout</a>
                         <?php } 

@@ -24,7 +24,7 @@
           <h2 class="fs-title">ADDRESS CHECK</h2>
           <h3 class="fs-subtitle">This is step 1</h3>
           <input type="text"  name="email"        placeholder="Email"       value="<?php echo$_SESSION['email']; ?>"/>
-          <textarea           name="address"      placeholder="Address"     value="<?php echo$_SESSION['address']; ?>"></textarea>
+          <textarea           name="address"      placeholder="Address"           ><?php echo$_SESSION['address']; ?></textarea>
           <input type="text"  name="city"         placeholder="city"        value="<?php echo$_SESSION['city']; ?>"/>
           <input type="text"  name="postal_code"  placeholder="postal code" value="<?php echo$_SESSION['postal_code']; ?>"/>
           <input type="text"  name="phone"        placeholder="phone"       value="<?php echo$_SESSION['phone']; ?>"/>
